@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .calculator { display: grid; grid-template-columns: repeat(4, 80px); gap: 10px; }
+    button { padding: 20px; font-size: 1.5rem; cursor: pointer; }
+    #result { grid-column: span 4; font-size: 2rem; text-align: right; padding: 10px; border: 2px solid #ddd; }
+  </style>
+</head>
+<body>
+
+  <h1>Basic Calculator</h1>
+
+  <div class="calculator">
+    <input type="text" id="result" disabled>
+    <button class="btn" data-value="7">7</button>
+    <button class="btn" data-value="8">8</button>
+    <button class="btn" data-value="9">9</button>
+    <button class="btn" data-value="/">/</button>
+
+    <button class="btn" data-value="4">4</button>
+    <button class="btn" data-value="5">5</button>
+    <button class="btn" data-value="6">6</button>
+    <button class="btn" data-value="*">*</button>
+
+    <button class="btn" data-value="1">1</button>
+    <button class="btn" data-value="2">2</button>
+    <button class="btn" data-value="3">3</button>
+    <button class="btn" data-value="-">-</button>
+
+    <button class="btn" data-value="0">0</button>
+    <button class="btn" data-value=".">.</button>
+    <button class="btn" id="clear">C</button>
+    <button class="btn" data-value="+">+</button>
+
+    <button class="btn" id="equals" style="grid-column: span 4;">=</button>
+  </div>
+
+  <script src="calc.js"></script>
+</body>
+</html>
